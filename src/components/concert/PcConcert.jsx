@@ -6,7 +6,7 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 //   return <>{imgs.map(img => console.log(img))}</>;
 // };
 
-const ConcertList = ({ title, date, place, ticket, imgsrc }) => {
+const ConcertList = ({ title, date, place, ticket, imgsrc, end }) => {
   return (
     <>
       <Box w="100%" display="flex" mt="2rem" mb="10">
@@ -92,7 +92,8 @@ const ConcertList = ({ title, date, place, ticket, imgsrc }) => {
           </Box>
         </Box>
       </Box>
-      <Divider mt="5" colorScheme="black" />
+      { !end ?<Divider mt="5" /> :""}
+      
     </>
   );
 };
@@ -128,6 +129,7 @@ export default function PcConcert() {
             place="국립아시아문화전당 예술극장 극장2"
             ticket="R석 50,000원 / S석 30,000원 / A석 20,000원"
             imgsrc="공연1-m.jpg"
+            end={true}
           />
         </Box>
       </Box>
