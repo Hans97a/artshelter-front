@@ -6,13 +6,15 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 //   return <>{imgs.map(img => console.log(img))}</>;
 // };
 
-const ConcertList = ({ title, date, place, ticket, imgsrc, end }) => {
+const ConcertList = ({ title, date, place, ticket, imgsrc, end, url }) => {
   return (
     <>
       <Box w="100%" display="flex" mt="2rem" mb="10">
-        <Box>
-          <Image boxSize="xs" objectFit="contain" src={imgsrc} alt={title} />
-        </Box>
+        <a href={url} target="_blank" rel="noreferrer">
+          <Box>
+            <Image boxSize="xs" objectFit="contain" src={imgsrc} alt={title} />
+          </Box>
+        </a>
         <Box ml="3rem">
           <Text mt="1rem" fontSize="2rem">
             {title}
@@ -85,15 +87,16 @@ const ConcertList = ({ title, date, place, ticket, imgsrc, end }) => {
               </Text>
             </Box>
             <Box mt="10">
-              <Button rightIcon={<ArrowForwardIcon />} colorScheme="green">
-                VIEW MORE
-              </Button>
+              <a href={url} target="_blank" rel="noreferrer">
+                <Button rightIcon={<ArrowForwardIcon />} colorScheme="green">
+                  VIEW MORE
+                </Button>
+              </a>
             </Box>
           </Box>
         </Box>
       </Box>
-      { !end ?<Divider mt="5" /> :""}
-      
+      {!end ? <Divider mt="5" /> : ""}
     </>
   );
 };
@@ -108,13 +111,13 @@ export default function PcConcert() {
       </Box>
       <Box display="flex" justifyContent="center">
         <Box w="70vw" mt="3rem" mb="10">
-          
           <ConcertList
             title="CHRISTMAS GIFT"
             date="2022년 12월 23일(금) 19시 30분"
             place="푸르지오 아트홀"
             ticket="전석 50,000원"
             imgsrc="공연2-m.jpg"
+            url="https://tickets.interpark.com/goods/22015331"
           />
           <ConcertList
             title="THE TRIP"
@@ -122,6 +125,7 @@ export default function PcConcert() {
             place="마포아트센터 플레이맥"
             ticket="전석 20,000원"
             imgsrc="공연3-m.jpg"
+            url="https://tickets.interpark.com/goods/22009482"
           />
           <ConcertList
             title="THE SCENT"
@@ -129,6 +133,7 @@ export default function PcConcert() {
             place="국립아시아문화전당 예술극장 극장2"
             ticket="R석 50,000원 / S석 30,000원 / A석 20,000원"
             imgsrc="공연1-m.jpg"
+            url="https://tickets.interpark.com/goods/22008731"
             end={true}
           />
         </Box>

@@ -6,7 +6,7 @@ import PcBanner from "./PcBanner";
 
 export default function PcBody() {
   const heightCheck = useMediaQuery({
-    query: "(max-height: 768px)"
+    query: "(max-height: 768px)",
   });
 
   return (
@@ -25,15 +25,17 @@ export default function PcBody() {
           <Text fontSize="2rem" fontWeight="bold">
             Art Shelter's Concert
           </Text>
-          <Button colorScheme="green" mt="5">
-            VIEW MORE
-          </Button>
+          <Link to="concert">
+            <Button colorScheme="green" mt="5">
+              VIEW MORE
+            </Button>
+          </Link>
         </Box>
       </Box>
       <Box
         display="flex"
         justifyContent="center"
-        h={heightCheck?"60vh" :"40vh"}
+        h={heightCheck ? "60vh" : "40vh"}
         ml="10rem"
         mr="10rem"
         columnGap="7"
@@ -90,12 +92,40 @@ export default function PcBody() {
             </Text>
           </Box>
         </Link>
-        <Link to="artist">
+        <Link>
           <Box
             bgColor="gray.200"
             w="xs"
             h="sm"
             __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
+            _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
+            onClick={() => alert("시스템 점검중입니다.")}
+            cursor="pointer"
+          >
+            <Image
+              src="최진욱.jpg"
+              display="block"
+              margin="auto"
+              w="2xs"
+              h="2xs"
+              objectFit="contain"
+              pt="5"
+            />
+            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
+              Notice
+            </Text>
+            <Text textAlign="center" mt="3" fontSize="1.2rem">
+              <ArrowRightIcon />
+            </Text>
+          </Box>
+        </Link>
+
+        {/* <Link to="artist">
+          <Box
+          bgColor="gray.200"
+          w="xs"
+          h="sm"
+          __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
             _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
           >
             <Image
@@ -108,14 +138,13 @@ export default function PcBody() {
               pt="5"
             />
             <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
-              ARTISTS
+              Notice
             </Text>
             <Text textAlign="center" mt="3" fontSize="1.2rem">
               <ArrowRightIcon />
             </Text>
           </Box>
-        </Link>
-        
+        </Link> */}
       </Box>
     </>
   );

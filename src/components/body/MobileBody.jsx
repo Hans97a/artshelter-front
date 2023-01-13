@@ -14,7 +14,7 @@ export default function MobileBody() {
       <Box
         display="flex"
         justifyContent="center"
-        h={heightCheck ? "80vh" : "50vh"}
+        h={heightCheck ? "70vh" : "55vh"}
         pt="8"
         bgColor="blackAlpha.50"
       >
@@ -82,7 +82,32 @@ export default function MobileBody() {
               </Text>
             </Box>
           </Link>
-          <Link to="artist">
+          <Box
+            bgColor="gray.200"
+            w="xs"
+            h="sm"
+            __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
+            _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
+            onClick={() => alert("시스템 점검중입니다.")}
+            cursor="pointer"
+          >
+            <Image
+              src="최진욱.jpg"
+              display="block"
+              margin="auto"
+              w="2xs"
+              h="2xs"
+              objectFit="contain"
+              pt="5"
+            />
+            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
+              Notice
+            </Text>
+            <Text textAlign="center" mt="3" fontSize="1.2rem">
+              <ArrowRightIcon />
+            </Text>
+          </Box>
+          {/* <Link to="artist">
             <Box
               bgColor="gray.200"
               w="xs"
@@ -111,7 +136,7 @@ export default function MobileBody() {
                 <ArrowRightIcon />
               </Text>
             </Box>
-          </Link>
+          </Link> */}
         </Box>
       </Box>
     </>

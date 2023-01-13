@@ -21,20 +21,37 @@ export default function MobileBanner() {
       >
         <SwiperSlide>
           <Box>
-            <Image src="공연1-m.jpg" />
+            <a
+              href="https://tickets.interpark.com/goods/22008731"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="공연1-m.jpg" />
+            </a>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box>
-            <Image src="공연2-m.jpg" />
+            <a
+              href="https://tickets.interpark.com/goods/22015331"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="공연2-m.jpg" />
+            </a>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box>
-            <Image src="공연3-m.jpg" />
+            <a
+              href="https://tickets.interpark.com/goods/22009482"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="공연3-m.jpg" />
+            </a>
           </Box>
         </SwiperSlide>
-
       </Swiper>
     </Box>
   );

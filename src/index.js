@@ -19,3 +19,4 @@ root.render(
 
 // https://falaner.tistory.com/56  텍스트 에디터
 // https://developer0809.tistory.com/94  메인화면 배너
+// https://www.ensemblian.com/artist 디자인 참고
