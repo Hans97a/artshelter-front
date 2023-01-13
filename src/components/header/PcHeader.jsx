@@ -50,8 +50,14 @@ export default function PcTest() {
     <Box position="sticky" top="0" zIndex="99" bgColor="white">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Link to={{ pathname: "/" }}>
-          <Box marginLeft="3rem" w="18rem" h="8rem" >
-            <Image src="logo.png" alt="아트쉘터 로고" w="100%" h="100%" objectFit="contain" />
+          <Box marginLeft="3rem" w="18rem" h="8rem">
+            <Image
+              src="logo.png"
+              alt="아트쉘터 로고"
+              w="100%"
+              h="100%"
+              objectFit="contain"
+            />
           </Box>
         </Link>
         <Box
@@ -61,12 +67,20 @@ export default function PcTest() {
           marginRight="1.3rem"
         >
           <Link to={{ pathname: "/about" }}>
-            <Text fontSize="1.2rem" fontWeight="500" _hover={{ color: "green" }}>
+            <Text
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{ color: "green" }}
+            >
               ABOUT
             </Text>
           </Link>
           <Link to={{ pathname: "/concert" }}>
-            <Text fontSize="1.2rem" fontWeight="500" _hover={{ color: "green" }}>
+            <Text
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{ color: "green" }}
+            >
               CONCERT
             </Text>
           </Link>
@@ -124,12 +138,21 @@ export default function PcTest() {
             </Menu>
           </Link> */}
           <Link to={{ pathname: "/education" }}>
-            <Text fontSize="1.2rem" fontWeight="500" _hover={{ color: "green" }}>
+            <Text
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{ color: "green" }}
+            >
               EDUCATION
             </Text>
           </Link>
-          <Link to={{ pathname: "/" }}>
-            <Text fontSize="1.2rem" fontWeight="500" _hover={{ color: "green" }}>
+          <Link>
+            <Text
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{ color: "green" }}
+              onClick={() => alert("시스템 점검중입니다.")}
+            >
               NOTICE
             </Text>
           </Link>
@@ -148,7 +171,6 @@ export default function PcTest() {
                     type="text"
                     placeholder="검색 ..."
                     w="15rem"
-                    
                     visibility="hidden"
                     onBlur={onBlur}
                     onChange={onChange}
@@ -168,7 +190,7 @@ export default function PcTest() {
                     colorScheme="white"
                     _hover={{ color: "green.200" }}
                   >
-                    <SearchIcon boxSize="1rem"/>
+                    <SearchIcon boxSize="1rem" />
                   </Button>
                 </InputRightElement>
               </InputGroup>

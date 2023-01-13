@@ -85,9 +85,14 @@ export default function MobileHeader() {
                   <Text fontWeight="bold">EDUCATION</Text>
                 </Box>
               </Link>
-              <Link to="/">
+              <Link>
                 <Box mt="0.7rem">
-                  <Text fontWeight="bold">NOTICE</Text>
+                  <Text
+                    fontWeight="bold"
+                    onClick={() => alert("시스템 점검중입니다.")}
+                  >
+                    NOTICE
+                  </Text>
                 </Box>
               </Link>
             </DrawerBody>
