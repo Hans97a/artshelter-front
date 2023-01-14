@@ -9,7 +9,7 @@ export default function MobileAbout() {
         </Text>
       </Box>
 
-      <Box mt="10" mb="5rem" ml="7">
+      <Box mt="10" mb="5rem" ml="7" w="90vw">
         <Box>
           <Text fontSize="1.5rem" fontWeight="600">
             Art Shelter
