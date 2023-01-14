@@ -65,6 +65,7 @@ export default function PcTest() {
           columnGap="1.5rem"
           alignItems="center"
           marginRight="1.3rem"
+          ml="9rem"
         >
           <Link to={{ pathname: "/about" }}>
             <Text

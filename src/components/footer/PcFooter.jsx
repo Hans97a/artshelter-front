@@ -8,7 +8,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-export default function PcFooter() { // 끝
+export default function PcFooter() {
+  // 끝
   return (
     <>
       <Box w="100%" h="15%" bgColor="blackAlpha.800">
@@ -22,10 +23,10 @@ export default function PcFooter() { // 끝
             >
               ART SHELTER
             </Text>
-            <Box display="flex" alignItems="center"   >
-              <Box color="white" >
+            <Box display="flex" alignItems="center">
+              <Box color="white">
                 <Text w="23rem">
-                  아트 쉘터{" "}
+                  아트쉘터{" "}
                   <Box as="span" ml="3px" mr="3px">
                     |
                   </Box>{" "}
@@ -50,7 +51,6 @@ export default function PcFooter() { // 끝
                 columnGap="5"
                 color="white"
                 ml="10%"
-                
                 w="25rem"
                 flexWrap="wrap"
                 rowGap="4"

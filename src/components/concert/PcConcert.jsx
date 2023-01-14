@@ -11,8 +11,15 @@ const ConcertList = ({ title, date, place, ticket, imgsrc, end, url }) => {
     <>
       <Box w="100%" display="flex" mt="2rem" mb="10">
         <a href={url} target="_blank" rel="noreferrer">
-          <Box>
-            <Image boxSize="xs" objectFit="contain" src={imgsrc} alt={title} />
+          <Box overflow="hidden">
+            <Image
+              boxSize="xs"
+              objectFit="contain"
+              transition="all 0.5s linear"
+              _hover={{ transform: "scale(1.1)", opacity: 0.6 }}
+              src={imgsrc}
+              alt={title}
+            />
           </Box>
         </a>
         <Box ml="3rem">
