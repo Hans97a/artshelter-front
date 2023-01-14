@@ -9,13 +9,13 @@ export default function MobileAbout() {
         </Text>
       </Box>
 
-      <Box mt="10" mb="5rem" ml="7" w="90vw">
+      <Box mt="10" mb="5rem" ml="7">
         <Box>
           <Text fontSize="1.5rem" fontWeight="600">
             Art Shelter
           </Text>
           <Box w="8rem" borderBottom="2px solid green" />
-          <Box w="25rem">
+          <Box w="22rem">
             <Text mt="15">
               예술(art)과 휴식처(shelter)가 합쳐진 공간으로 다양한 문화 예술
               콘텐츠를 제공하며, 청년 예술가들을 선두로 편안하고 쉬운 문화 예술
