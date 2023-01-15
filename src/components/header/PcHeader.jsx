@@ -76,6 +76,7 @@ export default function PcTest() {
               ABOUT
             </Text>
           </Link>
+
           <Link to={{ pathname: "/concert" }}>
             <Text
               fontSize="1.2rem"
@@ -85,6 +86,7 @@ export default function PcTest() {
               CONCERT
             </Text>
           </Link>
+
           {/* <Link to={{ pathname: "/" }}>
             <Menu autoSelect={false} colorScheme="white" isOpen={isConcertOpen}>
               <MenuButton
@@ -155,6 +157,15 @@ export default function PcTest() {
               onClick={() => alert("시스템 점검중입니다.")}
             >
               NOTICE
+            </Text>
+          </Link>
+          <Link to="/contact">
+            <Text
+              fontSize="1.2rem"
+              fontWeight="500"
+              _hover={{ color: "green" }}
+            >
+              CONTACT
             </Text>
           </Link>
         </Box>

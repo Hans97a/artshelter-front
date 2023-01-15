@@ -7,12 +7,13 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function PcFooter() {
   // 끝
   return (
     <>
-      <Box w="100%" h="15%" bgColor="blackAlpha.800">
+      {/* <Box w="100%" h="15%" bgColor="blackAlpha.800">
         <Box display="flex" justifyContent="center">
           <Box pt="1%">
             <Text
@@ -144,6 +145,47 @@ export default function PcFooter() {
           <Box color="white">
             <Text>Copyright © 2022 ART SHELTER</Text>
             <Text>Powered by ART SHELTER</Text>
+          </Box>
+        </Box>
+      </Box> */}
+
+      <Box
+        bgColor="blackAlpha.800"
+        w="100%"
+        h="6rem"
+        display="flex"
+        justifyContent="center"
+      >
+        <Box mt="5">
+          <Box display="flex" alignItems="center">
+            <Link to="/">
+              <Text fontSize="1.5rem" color="green" fontWeight="bold" mr="2rem">
+                ART SHELTER
+              </Text>
+            </Link>
+            <Text color="whiteAlpha.800" fontSize="0.8rem" mt="1">
+              아트쉘터{" "}
+              <Box as="span" ml="3" mr="3">
+                {" "}
+                |{" "}
+              </Box>{" "}
+              대표 : 김지후{" "}
+              <Box as="span" ml="3" mr="3">
+                {" "}
+                |{" "}
+              </Box>{" "}
+              사업자등록번호: 769-99-01174{" "}
+              <Box as="span" ml="3" mr="3">
+                {" "}
+                |{" "}
+              </Box>{" "}
+              주소: 서울특별시 마포구 성미산로 31길 11-14
+            </Text>
+          </Box>
+          <Box textAlign="center">
+            <Text color="whiteAlpha.800" fontSize="0.8rem" mt="1">
+              Copyright © 2022 ART SHELTER. Powered by ART SHELTER
+            </Text>
           </Box>
         </Box>
       </Box>

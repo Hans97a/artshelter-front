@@ -8,8 +8,6 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 
-
-
 const Temp = ({ url, src, title, date }) => {
   return (
     <GridItem>
@@ -48,6 +46,7 @@ export default function PcEducation() {
         mt="10"
         mb="10"
         justifyContent="center"
+        pb="20vh" // 에듀 데이터 부족으로 푸터 공백 발생 방지
       >
         <Temp
           url="https://blog.naver.com/art_shelter/222891441811"

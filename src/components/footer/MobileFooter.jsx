@@ -1,7 +1,4 @@
-import {
-  Box,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 
 import {
@@ -39,8 +36,6 @@ export default function MobileFooter() {
                   </Box>
                   서울 마포구 성미산로 31길 11-14
                 </Text>
-                <Text>TEL : 070-8065-0538</Text>
-                <Text>E-MAIL : art_shelter@naver.com</Text>
               </Box>
               <Box
                 display="flex"

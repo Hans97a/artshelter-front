@@ -95,6 +95,11 @@ export default function MobileHeader() {
                   </Text>
                 </Box>
               </Link>
+              <Link to="/contact">
+                <Box mt="0.5rem">
+                  <Text fontWeight="bold">CONTACT</Text>
+                </Box>
+              </Link>
             </DrawerBody>
           </DrawerContent>
         </Drawer>

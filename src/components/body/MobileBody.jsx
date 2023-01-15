@@ -92,7 +92,7 @@ export default function MobileBody() {
             cursor="pointer"
           >
             <Image
-              src="최진욱.jpg"
+              src="notice.jpg"
               display="block"
               margin="auto"
               w="2xs"
