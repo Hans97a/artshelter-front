@@ -14,11 +14,11 @@ export default function MobileFooter() {
       <Box w="100%" h="20%" bgColor="blackAlpha.800">
         <Box display="flex" justifyContent="center">
           <Box pt="1%">
-            <Text color="green" fontWeight="bold" fontSize="2rem" mt="1rem">
+            <Text color="green" fontWeight="bold" fontSize="1.5rem" mt="0.5rem">
               ART SHELTER
             </Text>
             <Box>
-              <Box color="white" mt="1rem">
+              <Box color="white" mt="0.5rem" fontSize="0.8rem">
                 <Text>
                   아트 쉘터{" "}
                   <Box as="span" ml="3px" mr="3px">
@@ -37,102 +37,11 @@ export default function MobileFooter() {
                   서울 마포구 성미산로 31길 11-14
                 </Text>
               </Box>
-              <Box
-                display="flex"
-                alignItems="center"
-                columnGap="5"
-                color="white"
-                flexWrap="wrap"
-                rowGap="4"
-                mt="1rem"
-              >
-                <Box
-                  borderRadius="50%"
-                  bgColor="green.500"
-                  w="2.5rem"
-                  h="2.5rem"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <a
-                    href="https://www.facebook.com/art.shelter11"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaFacebookSquare fontSize="1.3rem" />
-                  </a>
-                </Box>
-                <Box
-                  borderRadius="50%"
-                  bgColor="green.500"
-                  w="2.5rem"
-                  h="2.5rem"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <a
-                    href="https://blog.naver.com/art_shelter"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaBloggerB fontSize="1.3rem" />
-                  </a>
-                </Box>
-                <Box
-                  borderRadius="50%"
-                  bgColor="green.500"
-                  w="2.5rem"
-                  h="2.5rem"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <a
-                    href="https://www.instagram.com/art.shelter_/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaInstagram fontSize="1.3rem" />
-                  </a>
-                </Box>
-                <Box
-                  borderRadius="50%"
-                  bgColor="green.500"
-                  w="2.5rem"
-                  h="2.5rem"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <a
-                    href="https://www.youtube.com/channel/UCR7YmXDJZr9thCd10wEVilQ"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaYoutube fontSize="1.3rem" />
-                  </a>
-                </Box>
-                <Box
-                  borderRadius="50%"
-                  bgColor="green.500"
-                  w="2.5rem"
-                  h="2.5rem"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <a href="mailto:﻿art_shelter@naver.com">
-                    <EmailIcon fontSize="1.3rem" />
-                  </a>
-                </Box>
-              </Box>
             </Box>
           </Box>
         </Box>
-        <Box display="flex" justifyContent="center" mt="2rem" pb="2rem">
-          <Box color="white">
+        <Box display="flex" justifyContent="center" mt="0.5rem" pb="1rem">
+          <Box color="white" fontSize="0.8rem">
             <Text>Copyright © 2022 ART SHELTER</Text>
             <Text>Powered by ART SHELTER</Text>
           </Box>
