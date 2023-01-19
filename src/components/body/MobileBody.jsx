@@ -14,7 +14,7 @@ export default function MobileBody() {
       <Box
         display="flex"
         justifyContent="center"
-        h={heightCheck ? "70vh" : "55vh"}
+        h="70vh"
         pt="8"
         bgColor="blackAlpha.50"
       >
