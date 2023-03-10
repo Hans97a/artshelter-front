@@ -1,12 +1,12 @@
-import Body from "../components/body/Body";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
+import NoticeDetailBody from "../components/noticeDetail/NoticeDetailBody";
 
-export default function MainPage() {
+export default function NoticeDetail() {
   return (
     <>
       <Header />
-      <Body />
+      <NoticeDetailBody />
       <Footer />
     </>
   );

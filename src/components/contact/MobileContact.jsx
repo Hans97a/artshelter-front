@@ -46,36 +46,6 @@ export default function MobileContact() {
               <CustomMarker lat={37.564952} lng={126.925087} text="" />
             </GoogleMap>
           </Box>
-          <Box>
-            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
-              주소
-            </Text>
-            <Box display="flex">
-              <Box h="1px" border="1px solid green" w="6rem" />
-              <Box h="1px" border="1px solid gray" w="12rem" />
-            </Box>
-            <Text mt="3">서울 특별시 마포구 성미산로 31길 11-14</Text>
-          </Box>
-          <Box>
-            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
-              전화번호
-            </Text>
-            <Box display="flex">
-              <Box h="1px" border="1px solid green" w="6rem" />
-              <Box h="1px" border="1px solid gray" w="12rem" />
-            </Box>
-            <Text mt="3">070-8065-0538</Text>
-          </Box>
-          <Box>
-            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
-              이메일
-            </Text>
-            <Box display="flex">
-              <Box h="1px" border="1px solid green" w="6rem" />
-              <Box h="1px" border="1px solid gray" w="12rem" />
-            </Box>
-            <Text mt="3">art_shelter@naver.com</Text>
-          </Box>
           <Box
             display="flex"
             alignItems="center"
@@ -166,6 +136,36 @@ export default function MobileContact() {
                 <EmailIcon fontSize="1.3rem" />
               </a>
             </Box>
+          </Box>
+          <Box>
+            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
+              주소
+            </Text>
+            <Box display="flex">
+              <Box h="1px" border="1px solid green" w="6rem" />
+              <Box h="1px" border="1px solid gray" w="12rem" />
+            </Box>
+            <Text mt="3">서울 특별시 마포구 성미산로 31길 11-14</Text>
+          </Box>
+          <Box>
+            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
+              전화번호
+            </Text>
+            <Box display="flex">
+              <Box h="1px" border="1px solid green" w="6rem" />
+              <Box h="1px" border="1px solid gray" w="12rem" />
+            </Box>
+            <Text mt="3">070-8065-0538</Text>
+          </Box>
+          <Box>
+            <Text fontWeight="bold" fontSize="1.3rem" mb="3">
+              이메일
+            </Text>
+            <Box display="flex">
+              <Box h="1px" border="1px solid green" w="6rem" />
+              <Box h="1px" border="1px solid gray" w="12rem" />
+            </Box>
+            <Text mt="3">art_shelter@naver.com</Text>
           </Box>
         </Box>
       </Box>

@@ -1,12 +1,12 @@
-import Body from "../components/body/Body";
+import ConcertDetailBody from "../components/concertDetail/ConcertDetailBody";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
-export default function MainPage() {
+export default function ConcertDetail() {
   return (
     <>
       <Header />
-      <Body />
+      <ConcertDetailBody />
       <Footer />
     </>
   );

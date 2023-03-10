@@ -1,12 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
 
-import {
-  FaFacebookSquare,
-  FaBloggerB,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function PcFooter() {

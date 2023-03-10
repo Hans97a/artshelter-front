@@ -1,20 +1,16 @@
-import {
-  Box,
-  Card,
-  CardBody,
-  Center,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Card, CardBody, Text } from "@chakra-ui/react";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { getConcertList } from "../../api";
+import Paginator from "../Paginator";
 
-const ConcertList = ({ url, src, title, date, place }) => {
+const ConcertList = ({ pk, src, title, date, place }) => {
   return (
     <>
       <Card>
         <CardBody>
-          <a href={url} target="_blank" rel="noreferrer">
+          <Link to={{ pathname: `/concert/${pk}` }}>
             <Box overflow="hidden">
               <Box
                 backgroundImage={`url(${src})`}
@@ -32,9 +28,10 @@ const ConcertList = ({ url, src, title, date, place }) => {
                 overflow="hidden"
               />
             </Box>
-          </a>
+          </Link>
+
           <Box textAlign="center" mt="3">
-            <a href={url} target="_blank" rel="noreferrer">
+            <Link to={{ pathname: `/concert/${pk}` }}>
               <Text
                 fontSize="1.2rem"
                 fontWeight="500"
@@ -43,7 +40,7 @@ const ConcertList = ({ url, src, title, date, place }) => {
               >
                 {title}
               </Text>
-            </a>
+            </Link>
             <Text
               maxW="xs"
               overflow="hidden"
@@ -61,9 +58,23 @@ const ConcertList = ({ url, src, title, date, place }) => {
     </>
   );
 };
-// https://www.codingfactory.net/12584  이미지 확대
-// http://vincero.co.kr/concert/  디자인 참고
 export default function MobileConcert() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postPerPage = 5;
+  const { data } = useQuery(
+    [
+      "concerts",
+      {
+        currentPage: currentPage,
+        pageSize: postPerPage,
+      },
+    ],
+    getConcertList
+  );
+  const paginate = (pageNum) => {
+    setCurrentPage(pageNum);
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Box bgColor="blackAlpha.50" h="5rem" display="flex" alignItems="center">
@@ -73,27 +84,30 @@ export default function MobileConcert() {
       </Box>
       <Box display="flex" justifyContent="center" mt="10" mb="10">
         <Box display="grid" rowGap="10">
-          <ConcertList
-            src="공연2-m.jpg"
-            title="CHRISTMAS GIFT"
-            date="2022.07.31"
-            place="푸르지오 아트홀"
-            url="https://tickets.interpark.com/goods/22015331"
-          />
-          <ConcertList
-            src="공연3-m.jpg"
-            title="THE TRIP"
-            date="2022.07.31"
-            place="마포아트센터 플레이맥"
-            url="https://tickets.interpark.com/goods/22009482"
-          />
-          <ConcertList
-            src="공연1-m.jpg"
-            title="THE SCENT"
-            date="2022.07.31"
-            place="국립아시아문화전당 예술극장 극장2"
-            url="https://tickets.interpark.com/goods/22008731"
-          />
+          {data
+            ? data.results.map((concert, idx) => {
+                return (
+                  <ConcertList
+                    src={concert.cover}
+                    key={idx}
+                    title={concert.title}
+                    date={`${concert.year}.${concert.month}.${concert.day}`}
+                    place={concert.place}
+                    pk={concert.pk}
+                  />
+                );
+              })
+            : ""}
+          <Box display="flex" justifyContent="center">
+            <Paginator
+              postPerPage={postPerPage}
+              current={currentPage}
+              totalPosts={data?.count}
+              paginate={paginate}
+              hasNext={data?.next}
+              hasPrev={data?.prev}
+            />
+          </Box>
         </Box>
       </Box>
     </>

@@ -1,12 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
 
-import {
-  FaFacebookSquare,
-  FaBloggerB,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function MobileFooter() {
   return (
@@ -14,9 +8,16 @@ export default function MobileFooter() {
       <Box w="100%" h="20%" bgColor="blackAlpha.800">
         <Box>
           <Box pt="1%" ml="2rem">
-            <Text color="green" fontWeight="bold" fontSize="1.5rem" mt="0.5rem">
-              ART SHELTER
-            </Text>
+            <Link to="/">
+              <Text
+                color="green"
+                fontWeight="bold"
+                fontSize="1.5rem"
+                mt="0.5rem"
+              >
+                ART SHELTER
+              </Text>
+            </Link>
             <Box>
               <Box color="white" mt="0.5rem" fontSize="0.8rem">
                 <Text>

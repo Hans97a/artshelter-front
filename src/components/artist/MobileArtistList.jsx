@@ -26,7 +26,7 @@ export default function MobileArtistList() {
             <Box w="xs" pb="10" bgColor="gray.200">
               <Box display="flex" justifyContent="center">
                 <Image
-                  src="최진욱.jpg"
+                  src="artist-choi.jpg"
                   mt="10"
                   display="block"
                   w="2xs"
@@ -36,7 +36,10 @@ export default function MobileArtistList() {
               <Box display="flex" justifyContent="center">
                 <Box>
                   <Text fontSize="1.3rem" fontWeight="600">
-                    최진욱· Jinwook Choi
+                    최진욱
+                    <Box as="span" fontSize="1rem" ml="2">
+                      Jinwook Choi
+                    </Box>
                   </Text>
                   <Text textAlign="center">Saxophone</Text>
                   <Box display="flex" justifyContent="center" mt="5">
@@ -88,12 +91,12 @@ export default function MobileArtistList() {
               </Box>
             </Box>
           </Box>
-          {/* divide */}
+
           <Box>
             <Box w="xs" mt="5" pb="10" bgColor="gray.200">
               <Box display="flex" justifyContent="center">
                 <Image
-                  src="김남훈.jpeg"
+                  src="artist-seo.jpg"
                   mt="10"
                   display="block"
                   w="2xs"
@@ -103,7 +106,169 @@ export default function MobileArtistList() {
               <Box display="flex" justifyContent="center">
                 <Box>
                   <Text fontSize="1.3rem" fontWeight="600">
-                    김남훈· Namhoon Kim
+                    서정민
+                    <Box as="span" fontSize="1rem" ml="2">
+                      Jeongmin Seo
+                    </Box>
+                  </Text>
+                  <Text textAlign="center">Composer</Text>
+                  <Box display="flex" justifyContent="center" mt="5">
+                    <Popover placement="top">
+                      <PopoverTrigger>
+                        <Button colorScheme="green">Profile</Button>
+                      </PopoverTrigger>
+                      <PopoverContent w="80vw" h="25vh">
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverBody overflowY="scroll">
+                          <Box ml="5" mt="5" display="grid" rowGap="3">
+                            <Text>- 중앙대학교 음악학부 졸업예정</Text>
+                            <Text>
+                              - 창작뮤지컬 ‘Cloud nine’ 음악감독 및 작곡
+                            </Text>
+                            <Text>- 2021 경북창작가곡콩쿨 본선 진출</Text>
+                            <Text>- 2021 제주국제관악제 작곡부문 1위</Text>
+                          </Box>
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+          <Box>
+            <Box w="xs" mt="5" pb="10" bgColor="gray.200">
+              <Box display="flex" justifyContent="center">
+                <Image
+                  src="artist-basson.jpg"
+                  mt="10"
+                  display="block"
+                  w="2xs"
+                  h="xs"
+                />
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box>
+                  <Text fontSize="1.3rem" fontWeight="600">
+                    천영학
+                    <Box as="span" fontSize="1rem" ml="2">
+                      Younghak Cheon
+                    </Box>
+                  </Text>
+                  <Text textAlign="center">Basson</Text>
+                  <Box display="flex" justifyContent="center" mt="5">
+                    <Popover placement="top">
+                      <PopoverTrigger>
+                        <Button colorScheme="green">Profile</Button>
+                      </PopoverTrigger>
+                      <PopoverContent w="80vw" h="25vh">
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverBody overflowY="scroll">
+                          <Box ml="5" mt="5" display="grid" rowGap="3">
+                            <Text>- 한국예술종합학교 기악과 졸업</Text>
+                            <Text>- 한국예술종합학교 대학원 기악과 졸업</Text>
+                            <Text>- 성남시립교향악단 정기연주회 객원단원</Text>
+                            <Text>- 서울시 유스 오케스트라 수석단원</Text>
+                            <Text>- 금호영체임버 오디션합격 및 연주</Text>
+                            <Text>
+                              - 경기필하모닉 오케스트라 정기연주회 객원단원
+                            </Text>
+                            <Text>
+                              - KBS교향악단,경기필하모닉
+                              오케스트라,성남시립교향악단,과천시립교향악단
+                              객원단원
+                            </Text>
+                          </Box>
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+          <Box>
+            <Box w="xs" mt="5" pb="10" bgColor="gray.200">
+              <Box display="flex" justifyContent="center">
+                <Image
+                  src="artist-lim.jpg"
+                  mt="10"
+                  display="block"
+                  w="2xs"
+                  h="xs"
+                />
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box>
+                  <Text fontSize="1.3rem" fontWeight="600">
+                    임지수
+                    <Box as="span" fontSize="1rem" ml="2">
+                      Jisoo Lim
+                    </Box>
+                  </Text>
+                  <Text textAlign="center">Violin</Text>
+                  <Box display="flex" justifyContent="center" mt="5">
+                    <Popover placement="top">
+                      <PopoverTrigger>
+                        <Button colorScheme="green">Profile</Button>
+                      </PopoverTrigger>
+                      <PopoverContent w="80vw" h="25vh">
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverBody overflowY="scroll">
+                          <Box ml="5" mt="5" display="grid" rowGap="3">
+                            <Text>- 계원예술고등학교 실기 수석졸업</Text>
+                            <Text>- 독일 쾰른 국립음대 학사 과정 졸업</Text>
+                            <Text>- 독일 쾰른 국립음대 석사 과정 졸업</Text>
+                            <Text>
+                              - 독일 하노버 국립음대 최고연주자과정 졸업
+                            </Text>
+                            <Text>
+                              - 독일 크노프 국제콩쿨, 이탈리아 에스쿠치오니
+                              무지칼레 국제콩쿨, 이탈리아 지오반니 무지치스티
+                              국제콩쿨, 폴란드 말로폴스카 국제콩쿨 입상
+                            </Text>
+                            <Text>
+                              - 천안시향, 춘천시향, 유니송앙상블,
+                              라퓨즈플레이어즈 객원
+                            </Text>
+                            <Text>
+                              - 광주문화예술회관 대극장, Martin Schmidt
+                              Konzertsaal, Bad Pyrmont Konzerthaus 등에서
+                              연주활동
+                            </Text>
+                          </Box>
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+          <Box>
+            <Box w="xs" mt="5" pb="10" bgColor="gray.200">
+              <Box display="flex" justifyContent="center">
+                <Image
+                  src="artist-kim.jpeg"
+                  mt="10"
+                  display="block"
+                  w="2xs"
+                  h="xs"
+                />
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box>
+                  <Text fontSize="1.3rem" fontWeight="600">
+                    김남훈
+                    <Box as="span" fontSize="1rem" ml="2">
+                      Namhoon Kim
+                    </Box>
                   </Text>
                   <Text textAlign="center">Bassoon</Text>
                   <Box display="flex" justifyContent="center" mt="5">
@@ -126,49 +291,6 @@ export default function MobileArtistList() {
                               수료
                             </Text>
                             <Text>- 광주예술고등학교 출강</Text>
-                          </Box>
-                        </PopoverBody>
-                      </PopoverContent>
-                    </Popover>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-          {/* divide */}
-          <Box>
-            <Box w="xs" mt="5" pb="10" bgColor="gray.200">
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="서정민.jpg"
-                  mt="10"
-                  display="block"
-                  w="2xs"
-                  h="xs"
-                />
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Box>
-                  <Text fontSize="1.3rem" fontWeight="600">
-                    서정민· Jeongmin Seo
-                  </Text>
-                  <Text textAlign="center">Composer</Text>
-                  <Box display="flex" justifyContent="center" mt="5">
-                    <Popover placement="top">
-                      <PopoverTrigger>
-                        <Button colorScheme="green">Profile</Button>
-                      </PopoverTrigger>
-                      <PopoverContent w="80vw" h="25vh">
-                        <PopoverArrow />
-                        <PopoverCloseButton />
-                        <PopoverBody overflowY="scroll">
-                          <Box ml="5" mt="5" display="grid" rowGap="3">
-                            <Text>- 중앙대학교 음악학부 졸업예정</Text>
-                            <Text>
-                              - 창작뮤지컬 ‘Cloud nine’ 음악감독 및 작곡
-                            </Text>
-                            <Text>- 2021 경북창작가곡콩쿨 본선 진출</Text>
-                            <Text>- 2021 제주국제관악제 작곡부문 1위</Text>
                           </Box>
                         </PopoverBody>
                       </PopoverContent>

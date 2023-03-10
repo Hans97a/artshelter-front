@@ -35,23 +35,23 @@ export default function PcBody() {
       <Box
         display="flex"
         justifyContent="center"
-        h={heightCheck ? "60vh" : "40vh"}
+        h={heightCheck ? "50vh" : "30vh"}
         ml="10rem"
         mr="10rem"
         columnGap="7"
-        mt="-2rem"
-        mb="5rem"
+        mt="-3rem"
+        mb="3rem"
+        pb="2rem"
       >
         <Link to="artist">
           <Box
-            bgColor="gray.200"
             w="xs"
-            h="sm"
+            h="2xs"
             __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
             _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
           >
             <Image
-              src="최진욱.jpg"
+              src="artist-m.jpg"
               display="block"
               margin="auto"
               w="2xs"
@@ -59,24 +59,17 @@ export default function PcBody() {
               objectFit="contain"
               pt="5"
             />
-            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
-              ARTISTS
-            </Text>
-            <Text textAlign="center" mt="3" fontSize="1.2rem">
-              <ArrowRightIcon />
-            </Text>
           </Box>
         </Link>
         <Link to="/education">
           <Box
-            bgColor="gray.200"
             w="xs"
-            h="sm"
+            h="2xs"
             __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
             _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
           >
             <Image
-              src="edu.jpg"
+              src="edu_main.jpg"
               display="block"
               margin="auto"
               w="2xs"
@@ -84,26 +77,18 @@ export default function PcBody() {
               objectFit="contain"
               pt="5"
             />
-            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
-              Education
-            </Text>
-            <Text textAlign="center" mt="3" fontSize="1.2rem">
-              <ArrowRightIcon />
-            </Text>
           </Box>
         </Link>
-        <Link>
+        <Link to="/notice">
           <Box
-            bgColor="gray.200"
             w="xs"
-            h="sm"
+            h="2xs"
             __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
             _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
-            onClick={() => alert("시스템 점검중입니다.")}
             cursor="pointer"
           >
             <Image
-              src="notice.jpg"
+              src="notice-m.jpg"
               display="block"
               margin="auto"
               w="2xs"
@@ -111,40 +96,8 @@ export default function PcBody() {
               objectFit="contain"
               pt="5"
             />
-            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
-              Notice
-            </Text>
-            <Text textAlign="center" mt="3" fontSize="1.2rem">
-              <ArrowRightIcon />
-            </Text>
           </Box>
         </Link>
-
-        {/* <Link to="artist">
-          <Box
-          bgColor="gray.200"
-          w="xs"
-          h="sm"
-          __css={{ transfrom: "scale(0.5)", transition: "transform .5s;" }}
-            _hover={{ transform: "scale(1.02)", transition: "transform .5s" }}
-          >
-            <Image
-              src="최진욱.jpg"
-              display="block"
-              margin="auto"
-              w="2xs"
-              h="2xs"
-              objectFit="contain"
-              pt="5"
-            />
-            <Text textAlign="center" mt="3" fontSize="1.2rem" fontWeight="bold">
-              Notice
-            </Text>
-            <Text textAlign="center" mt="3" fontSize="1.2rem">
-              <ArrowRightIcon />
-            </Text>
-          </Box>
-        </Link> */}
       </Box>
     </>
   );

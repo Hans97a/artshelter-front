@@ -1,16 +1,17 @@
 import { Box, Button, Divider, Image, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useQuery } from "@tanstack/react-query";
+import { getConcertList } from "../../api";
+import Paginator from "../Paginator";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-// const ConcertItem = (props) => {
-//   const imgs = props.imgs;
-//   return <>{imgs.map(img => console.log(img))}</>;
-// };
-
-const ConcertList = ({ title, date, place, ticket, imgsrc, end, url }) => {
+const ConcertList = ({ title, date, place, ticket, imgsrc, start, pk }) => {
   return (
     <>
+      {!start ? <Divider /> : ""}
       <Box w="100%" display="flex" mt="2rem" mb="10">
-        <a href={url} target="_blank" rel="noreferrer">
+        <Link to={{ pathname: `${pk}` }}>
           <Box overflow="hidden">
             <Image
               boxSize="xs"
@@ -21,7 +22,8 @@ const ConcertList = ({ title, date, place, ticket, imgsrc, end, url }) => {
               alt={title}
             />
           </Box>
-        </a>
+        </Link>
+
         <Box ml="3rem">
           <Text mt="1rem" fontSize="2rem">
             {title}
@@ -93,22 +95,32 @@ const ConcertList = ({ title, date, place, ticket, imgsrc, end, url }) => {
                 {ticket}
               </Text>
             </Box>
-            <Box mt="10">
-              <a href={url} target="_blank" rel="noreferrer">
+            <Box mt="10" display="flex">
+              <Link to={{ pathname: `${pk}` }}>
                 <Button rightIcon={<ArrowForwardIcon />} colorScheme="green">
                   VIEW MORE
                 </Button>
-              </a>
+              </Link>
             </Box>
           </Box>
         </Box>
       </Box>
-      {!end ? <Divider mt="5" /> : ""}
     </>
   );
 };
 
 export default function PcConcert() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postPerPage = 3;
+  const { data } = useQuery(
+    ["concerts", { currentPage: currentPage, pageSize: postPerPage }],
+    getConcertList
+  );
+  const paginate = (pageNum) => {
+    setCurrentPage(pageNum);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Box bgColor="blackAlpha.50" h="16vh" display="flex" alignItems="center">
@@ -118,31 +130,37 @@ export default function PcConcert() {
       </Box>
       <Box display="flex" justifyContent="center">
         <Box w="70vw" mt="3rem" mb="10">
-          <ConcertList
-            title="CHRISTMAS GIFT"
-            date="2022년 12월 23일(금) 19시 30분"
-            place="푸르지오 아트홀"
-            ticket="전석 50,000원"
-            imgsrc="공연2-m.jpg"
-            url="https://tickets.interpark.com/goods/22015331"
-          />
-          <ConcertList
-            title="THE TRIP"
-            date="2022년 08월 06일(금) 17시"
-            place="마포아트센터 플레이맥"
-            ticket="전석 20,000원"
-            imgsrc="공연3-m.jpg"
-            url="https://tickets.interpark.com/goods/22009482"
-          />
-          <ConcertList
-            title="THE SCENT"
-            date="2022년 7월 31일(일) 18시"
-            place="국립아시아문화전당 예술극장 극장2"
-            ticket="R석 50,000원 / S석 30,000원 / A석 20,000원"
-            imgsrc="공연1-m.jpg"
-            url="https://tickets.interpark.com/goods/22008731"
-            end={true}
-          />
+          {data
+            ? data?.results.map((concert, idx) => {
+                return (
+                  <ConcertList
+                    pk={concert.pk}
+                    key={"concertItem" + concert.pk}
+                    title={concert.title}
+                    date={`${concert.year}년 ${concert.month}월 ${concert.day}일 ${concert.hour}시 ${concert.minute}분`}
+                    place={concert.place}
+                    ticket={concert.ticket}
+                    imgsrc={concert.cover}
+                    start={idx === 0 ? true : false}
+                  />
+                );
+              })
+            : ""}
+
+          <Box display="flex" justifyContent="center" mt="5rem">
+            {data ? (
+              <Paginator
+                postPerPage={postPerPage}
+                current={currentPage}
+                totalPosts={data?.count}
+                paginate={paginate}
+                hasNext={data?.next}
+                hasPrev={data?.prev}
+              />
+            ) : (
+              ""
+            )}
+          </Box>
         </Box>
       </Box>
     </>

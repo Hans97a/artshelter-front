@@ -10,11 +10,6 @@ import {
   DrawerHeader,
   DrawerBody,
   useDisclosure,
-  Accordion,
-  AccordionItem,
-  AccordionIcon,
-  AccordionPanel,
-  AccordionButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -31,7 +26,10 @@ export default function MobileHeader() {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Link to={{ pathname: "/" }}>
           <Box w="10rem" h="4rem" pt="0.5rem">
-            <Image src="logo.png" alt="아트쉘터 로고" />
+            <Image
+              src={process.env.PUBLIC_URL + "/logo.png"}
+              alt="아트쉘터 로고"
+            />
           </Box>
         </Link>
         <Button ref={btnRef} colorScheme="white" onClick={onOpen}>
@@ -54,45 +52,25 @@ export default function MobileHeader() {
                   <Text fontWeight="bold">ABOUT</Text>
                 </Box>
               </Link>
-
-              {/* temp */}
+              <Link to="/artist">
+                <Box mt="0.5rem">
+                  <Text fontWeight="bold">ARTIST</Text>
+                </Box>
+              </Link>
               <Link to="/concert">
                 <Box mt="0.5rem">
                   <Text fontWeight="bold">CONCERT</Text>
                 </Box>
               </Link>
 
-              {/* <Box mt="0.5rem">
-                <Accordion border="none" allowToggle>
-                  <AccordionItem borderStyle="hidden">
-                    <AccordionButton pl="0" _hover={{ color: "green.700" }}>
-                      <Text fontWeight="bold">CONCERT</Text>
-                      <AccordionIcon />
-                    </AccordionButton>
-                    <AccordionPanel>
-                      <Link to="/">
-                        <Text _hover={{ color: "green.700" }}>2023</Text>
-                      </Link>
-                      <Link>
-                        <Text  _hover={{ color: "green.700" }}>2022</Text>
-                      </Link>
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box> */}
               <Link to="/education">
                 <Box mt="0.5rem">
                   <Text fontWeight="bold">EDUCATION</Text>
                 </Box>
               </Link>
-              <Link>
-                <Box mt="0.7rem">
-                  <Text
-                    fontWeight="bold"
-                    onClick={() => alert("시스템 점검중입니다.")}
-                  >
-                    NOTICE
-                  </Text>
+              <Link to="/notice">
+                <Box mt="0.5rem">
+                  <Text fontWeight="bold">NOTICE</Text>
                 </Box>
               </Link>
               <Link to="/contact">

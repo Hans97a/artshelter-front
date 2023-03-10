@@ -4,8 +4,12 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useQuery } from "@tanstack/react-query";
+import { getBanner } from "../../api";
+import { Link } from "react-router-dom";
 
 export default function MobileBanner() {
+  const { isLoading, data } = useQuery(["banner"], getBanner);
   return (
     <Box w="20rem">
       <Swiper
@@ -19,39 +23,19 @@ export default function MobileBanner() {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         speed={1500}
       >
-        <SwiperSlide>
-          <Box>
-            <a
-              href="https://tickets.interpark.com/goods/22008731"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="공연1-m.jpg" />
-            </a>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <a
-              href="https://tickets.interpark.com/goods/22015331"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="공연2-m.jpg" />
-            </a>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <a
-              href="https://tickets.interpark.com/goods/22009482"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="공연3-m.jpg" />
-            </a>
-          </Box>
-        </SwiperSlide>
+        {!isLoading
+          ? data?.map((concert, idx) => {
+              return (
+                <SwiperSlide key={idx}>
+                  <Box>
+                    <Link to={{ pathname: `/concert/${concert.pk}` }}>
+                      <Image src={concert.cover} />
+                    </Link>
+                  </Box>
+                </SwiperSlide>
+              );
+            })
+          : ""}
       </Swiper>
     </Box>
   );

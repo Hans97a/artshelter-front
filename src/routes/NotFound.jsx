@@ -1,17 +1,13 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
 export default function NotFound() {
   return (
     <>
       <Header />
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        mt="10rem"
-      >
+      <Box display="flex" justifyContent="center" alignItems="center" h="80vh">
         <Box>
           <Text color="red" fontSize="2rem" fontWeight="bold">
             404 Not Found!
@@ -29,6 +25,7 @@ export default function NotFound() {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 }
