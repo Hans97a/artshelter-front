@@ -208,8 +208,11 @@ export default function PcArtistList() {
               <Image src="artist-kim.jpeg" w="100%" h="100%" alt="artist" />
             </Box>
             <Box ml="5">
-              <Text fontSize="2rem" fontWeight="600">
-                김남훈· Namhoon Kim
+            <Text fontSize="2rem" fontWeight="600">
+                김남훈
+                <Box as="span" fontSize="1rem" ml="3">
+                  Namhoon Kim
+                </Box>
               </Text>
               <Text
                 fontSize="1.2rem"
