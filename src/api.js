@@ -3,7 +3,7 @@ import Cookie from "js-cookie";
 
 const instance = axios.create({
   baseURL:
-    "http://artshelter-api.link/",
+    "https://artshelter-api.link/",
   // process.env.NODE_ENV === "development"
   //   ? "http://127.0.0.1:8000/"
   //   : "http://artshelter-api.link/",
