@@ -137,7 +137,7 @@ export default function PcConcert() {
                     pk={concert.pk}
                     key={"concertItem" + concert.pk}
                     title={concert.title}
-                    date={`${concert.year}년 ${concert.month}월 ${concert.day}일 ${concert.hour}시 ${concert.minute}분`}
+                    date={`${concert.year}년 ${concert.month}월 ${concert.day}일 ${concert.hour}시 ${concert.minute == 0? concert.minute + "분" : ""}`}
                     place={concert.place}
                     ticket={concert.ticket}
                     imgsrc={concert.cover}
