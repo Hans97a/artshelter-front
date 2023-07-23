@@ -132,7 +132,6 @@ export default function PcConcert() {
         <Box w="70vw" mt="3rem" mb="10">
           {data
             ? data?.results.map((concert, idx) => {
-              console.log( typeof concert.minute )
                 return (
                   <ConcertList
                     pk={concert.pk}
